@@ -21,13 +21,13 @@
 
 ## ✨ Features
 
-- ⚡ **Next.js 13** — App Router with React Server Components
-- 🎨 **Tailwind CSS 3** — Utility-first styling with custom design system
-- 🧭 **TypeScript** — Full type safety across the entire codebase
-- 🎬 **Framer Motion** — Smooth animations and transitions
-- 📱 **Fully Responsive** — Mobile-first design that looks great on every device
-- 🌙 **Dark Theme** — Elegant dark mode with glassmorphism effects
-- 🚀 **Static Export** — Blazing fast performance, deployed anywhere
+- ⚡ **Next.js 13** - App Router with React Server Components
+- 🎨 **Tailwind CSS 3** - Utility-first styling with custom design system
+- 🧭 **TypeScript** - Full type safety across the entire codebase
+- 🎬 **Framer Motion** - Smooth animations and transitions
+- 📱 **Fully Responsive** - Mobile-first design that looks great on every device
+- 🌙 **Dark Theme** - Elegant dark mode with glassmorphism effects
+- 🚀 **Static Export** - Blazing fast performance, deployed anywhere
 
 ## 🏗️ Project Structure
 
