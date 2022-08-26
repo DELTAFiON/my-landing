@@ -13,7 +13,9 @@
 
 **A beautiful, modern landing page built with the best web technologies of 2022.**
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-View%20Site-0ea5e9?style=for-the-badge)](https://my-landing-alpha-seven.vercel.app) · [Report Bug](https://github.com/DELTAFiON/my-landing/issues) · [Request Feature](https://github.com/DELTAFiON/my-landing/issues)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-View%20Site-0ea5e9?style=for-the-badge)](https://my-landing-alpha-seven.vercel.app)
+[![Report Bug](https://img.shields.io/badge/Report%20Bug-Issue-red?style=for-the-badge)](https://github.com/DELTAFiON/my-landing/issues)
+[![Request Feature](https://img.shields.io/badge/Request%20Feature-Enhancement-blue?style=for-the-badge)](https://github.com/DELTAFiON/my-landing/issues)
 
 </div>
 
