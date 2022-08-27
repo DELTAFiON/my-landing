@@ -1,13 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
 
 const links = [
   { name: "About", href: "#about" },
   { name: "Services", href: "#services" },
-  { name: "Features", href: "#features" },
-  { name: "Testimonials", href: "#testimonials" },
+  { name: "Work", href: "#features" },
   { name: "Team", href: "#team" },
   { name: "Contact", href: "#contact" },
 ];
@@ -16,9 +14,9 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-dark-950/80 backdrop-blur-md border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="text-xl font-bold gradient-text">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-sm border-b border-white/[0.06]">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="#" className="text-lg font-semibold tracking-tight">
           Landing
         </a>
 
@@ -27,28 +25,35 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="text-gray-300 hover:text-white transition-colors text-sm"
+              className="text-sm text-gray-400 hover:text-white transition-colors"
             >
               {link.name}
             </a>
           ))}
-          <a href="#contact" className="btn-primary text-sm">
+          <a
+            href="#contact"
+            className="bg-white text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-gray-200 transition-colors"
+          >
             Get Started
           </a>
         </div>
 
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        <button
+          className="md:hidden w-6 h-6 flex flex-col justify-center gap-1.5"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <span className={`w-full h-px bg-white transition-transform ${isOpen ? "rotate-45 translate-y-[3.5px]" : ""}`} />
+          <span className={`w-full h-px bg-white transition-transform ${isOpen ? "-rotate-45 -translate-y-[3.5px]" : ""}`} />
         </button>
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-dark-950/95 backdrop-blur-md border-b border-white/10 px-6 py-4 space-y-4">
+        <div className="md:hidden bg-[#0a0a0a] border-b border-white/[0.06] px-6 py-4 space-y-4">
           {links.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="block text-gray-300 hover:text-white"
+              className="block text-gray-400 hover:text-white"
               onClick={() => setIsOpen(false)}
             >
               {link.name}
@@ -56,7 +61,7 @@ export default function Navbar() {
           ))}
           <a
             href="#contact"
-            className="block btn-primary text-center text-sm"
+            className="block bg-white text-black px-5 py-2 rounded-full text-sm font-semibold text-center"
             onClick={() => setIsOpen(false)}
           >
             Get Started

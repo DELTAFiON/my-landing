@@ -8,32 +8,28 @@
   }
 
   body {
-    @apply bg-dark-950 text-white font-sans antialiased;
+    @apply bg-[#0a0a0a] text-white font-sans antialiased;
   }
 }
 
 @layer components {
   .section-padding {
-    @apply py-20 md:py-32 px-6;
+    @apply py-24 md:py-32 px-6;
   }
 
   .container-max {
-    @apply max-w-7xl mx-auto;
-  }
-
-  .gradient-text {
-    @apply bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600 bg-clip-text text-transparent;
-  }
-
-  .card {
-    @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300;
+    @apply max-w-6xl mx-auto;
   }
 
   .btn-primary {
-    @apply bg-primary-500 hover:bg-primary-600 px-8 py-3 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/25;
+    @apply bg-white text-black px-8 py-3 rounded-full font-semibold text-base transition-all duration-200 hover:bg-gray-200;
   }
 
   .btn-secondary {
-    @apply bg-white/10 hover:bg-white/20 px-8 py-3 rounded-full font-semibold text-lg transition-all duration-300;
+    @apply border border-white/20 text-white px-8 py-3 rounded-full font-semibold text-base transition-all duration-200 hover:border-white/40;
+  }
+
+  .card {
+    @apply bg-white/[0.03] border border-white/[0.08] rounded-xl p-8;
   }
 }

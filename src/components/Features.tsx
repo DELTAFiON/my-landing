@@ -1,46 +1,44 @@
-import { MessageSquare, Megaphone, Users, Wand2 } from "lucide-react";
-
 const features = [
   {
-    icon: MessageSquare,
-    title: "Lorem ipsum",
-    text: "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.",
+    title: "Responsive by default",
+    description: "Every layout adapts gracefully from mobile to desktop. No exceptions.",
   },
   {
-    icon: Megaphone,
-    title: "Lorem ipsum",
-    text: "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.",
+    title: "Performance first",
+    description: "Sub-second loads. Optimized assets. No render-blocking resources.",
   },
   {
-    icon: Users,
-    title: "Lorem ipsum",
-    text: "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.",
+    title: "Accessible",
+    description: "WCAG AA compliant. Keyboard navigable. Screen reader friendly.",
   },
   {
-    icon: Wand2,
-    title: "Lorem ipsum",
-    text: "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.",
+    title: "SEO optimized",
+    description: "Semantic HTML, meta tags, and structured data built in.",
+  },
+  {
+    title: "Easy to customize",
+    description: "CSS custom properties make theming a one-line change.",
+  },
+  {
+    title: "No dependencies",
+    description: "Built with native web technologies. No bloated frameworks.",
   },
 ];
 
 export default function Features() {
   return (
-    <section id="features" className="section-padding">
+    <section id="features" className="section-padding border-t border-white/[0.06]">
       <div className="container-max">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Our <span className="gradient-text">Features</span>
-          </h2>
-        </div>
+        <p className="text-sm text-gray-500 mb-4 tracking-wide uppercase">Capabilities</p>
+        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-16 max-w-xl">
+          Built to work. Not to impress.
+        </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="card text-center group">
-              <div className="w-16 h-16 rounded-2xl bg-primary-500/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-500/20 transition-colors">
-                <feature.icon className="w-8 h-8 text-primary-400" />
-              </div>
-              <h3 className="text-lg font-semibold mb-3">{feature.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{feature.text}</p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, i) => (
+            <div key={i} className="border-l border-white/[0.08] pl-6">
+              <h3 className="font-medium mb-2">{feature.title}</h3>
+              <p className="text-sm text-gray-500 leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>

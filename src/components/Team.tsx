@@ -1,30 +1,25 @@
 const team = [
-  { name: "John Doe", job: "Director" },
-  { name: "Mike Doe", job: "Senior Designer" },
-  { name: "Jane Doe", job: "Senior Designer" },
-  { name: "Karen Doe", job: "Project Manager" },
+  { name: "John Doe", role: "Founder" },
+  { name: "Mike Doe", role: "Design Lead" },
+  { name: "Jane Doe", role: "Engineering" },
+  { name: "Karen Doe", role: "Strategy" },
 ];
 
 export default function Team() {
   return (
-    <section id="team" className="section-padding">
+    <section id="team" className="section-padding border-t border-white/[0.06]">
       <div className="container-max">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Our <span className="gradient-text">Team</span>
-          </h2>
-        </div>
+        <p className="text-sm text-gray-500 mb-4 tracking-wide uppercase">Team</p>
+        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-16">
+          Small team, senior only.
+        </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {team.map((member, index) => (
-            <div key={index} className="card text-center group">
-              <div className="w-24 h-24 rounded-full bg-primary-500/20 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-500/30 transition-colors">
-                <span className="text-primary-400 font-bold text-2xl">
-                  {member.name.charAt(0)}
-                </span>
-              </div>
-              <h3 className="text-lg font-semibold mb-1">{member.name}</h3>
-              <p className="text-gray-400 text-sm">{member.job}</p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {team.map((member, i) => (
+            <div key={i}>
+              <div className="aspect-square bg-white/[0.03] rounded-lg mb-4" />
+              <div className="font-medium text-sm">{member.name}</div>
+              <div className="text-xs text-gray-500 mt-1">{member.role}</div>
             </div>
           ))}
         </div>

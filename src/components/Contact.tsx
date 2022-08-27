@@ -1,58 +1,25 @@
-import { MapPin, Phone, Mail, Facebook, Twitter, Youtube } from "lucide-react";
-
 export default function Contact() {
   return (
-    <section id="contact" className="section-padding bg-dark-900/50">
+    <section id="contact" className="section-padding border-t border-white/[0.06]">
       <div className="container-max">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Contact <span className="gradient-text">Us</span>
-          </h2>
-        </div>
-
         <div className="grid md:grid-cols-2 gap-16">
-          <div className="space-y-8">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center flex-shrink-0">
-                <MapPin className="w-6 h-6 text-primary-400" />
-              </div>
-              <div>
-                <h3 className="font-semibold mb-1">Address</h3>
-                <p className="text-gray-400">4321 California St, San Francisco, CA 12345</p>
-              </div>
-            </div>
+          <div>
+            <p className="text-sm text-gray-500 mb-4 tracking-wide uppercase">Contact</p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
+              Let's talk.
+            </h2>
+            <p className="text-gray-400 mb-8">
+              Have a project in mind? We'd love to hear about it.
+            </p>
 
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center flex-shrink-0">
-                <Phone className="w-6 h-6 text-primary-400" />
+            <div className="space-y-4 text-sm">
+              <div>
+                <span className="text-gray-500">Email</span>
+                <div className="text-gray-300 mt-1">hello@landing.studio</div>
               </div>
               <div>
-                <h3 className="font-semibold mb-1">Phone</h3>
-                <p className="text-gray-400">+1 123 456 1234</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center flex-shrink-0">
-                <Mail className="w-6 h-6 text-primary-400" />
-              </div>
-              <div>
-                <h3 className="font-semibold mb-1">Email</h3>
-                <p className="text-gray-400">info@company.com</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center flex-shrink-0">
-                <Facebook className="w-6 h-6 text-primary-400" />
-              </div>
-              <div>
-                <h3 className="font-semibold mb-1">Social</h3>
-                <div className="flex gap-4 text-gray-400">
-                  <a href="#" className="hover:text-primary-400 transition-colors">Facebook</a>
-                  <a href="#" className="hover:text-primary-400 transition-colors">Twitter</a>
-                  <a href="#" className="hover:text-primary-400 transition-colors">YouTube</a>
-                </div>
+                <span className="text-gray-500">Location</span>
+                <div className="text-gray-300 mt-1">San Francisco, CA</div>
               </div>
             </div>
           </div>
@@ -60,31 +27,28 @@ export default function Contact() {
           <div>
             <form className="space-y-6">
               <div>
-                <label className="block text-sm font-medium mb-2">Name</label>
+                <label className="block text-xs text-gray-500 mb-2 uppercase tracking-wider">Name</label>
                 <input
                   type="text"
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-primary-500 transition-colors"
-                  placeholder="Your name"
+                  className="w-full bg-transparent border-b border-white/[0.1] py-3 focus:outline-none focus:border-white/30 transition-colors"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2">Email</label>
+                <label className="block text-xs text-gray-500 mb-2 uppercase tracking-wider">Email</label>
                 <input
                   type="email"
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-primary-500 transition-colors"
-                  placeholder="your@email.com"
+                  className="w-full bg-transparent border-b border-white/[0.1] py-3 focus:outline-none focus:border-white/30 transition-colors"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2">Message</label>
+                <label className="block text-xs text-gray-500 mb-2 uppercase tracking-wider">Message</label>
                 <textarea
-                  rows={5}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-primary-500 transition-colors resize-none"
-                  placeholder="Your message..."
+                  rows={4}
+                  className="w-full bg-transparent border-b border-white/[0.1] py-3 focus:outline-none focus:border-white/30 transition-colors resize-none"
                 />
               </div>
-              <button type="submit" className="btn-primary w-full">
-                Send Message
+              <button type="submit" className="btn-primary">
+                Send message
               </button>
             </form>
           </div>

@@ -1,36 +1,41 @@
-import { CheckCircle } from "lucide-react";
-
-const whyItems = [
-  "Lorem ipsum dolor",
-  "Tempor incididunt",
-  "Lorem ipsum dolor",
-  "Incididunt ut labore",
-  "Aliquip ex ea commodo",
-  "Lorem ipsum dolor",
+const principles = [
+  {
+    title: "Clarity over cleverness",
+    description: "Every element serves a purpose. If it doesn't communicate, it doesn't belong.",
+  },
+  {
+    title: "Restraint in motion",
+    description: "Animation guides attention. It never decorates for decoration's sake.",
+  },
+  {
+    title: "Typography leads",
+    description: "Words are the interface. Hierarchy, spacing, and weight do the heavy lifting.",
+  },
 ];
 
 export default function About() {
   return (
-    <section id="about" className="section-padding">
+    <section id="about" className="section-padding border-t border-white/[0.06]">
       <div className="container-max">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-16">
           <div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              About <span className="gradient-text">Us</span>
+            <p className="text-sm text-gray-500 mb-4 tracking-wide uppercase">About</p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
+              Design with intention.
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
             <p className="text-gray-400 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              This template was built to demonstrate that great design doesn't need gimmicks. No gradients, no glassmorphism, no decorative noise. Just solid fundamentals: good type, generous space, and purposeful interaction.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
-            {whyItems.map((item, index) => (
-              <div key={index} className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-primary-400 flex-shrink-0" />
-                <span className="text-gray-300 text-sm">{item}</span>
+          <div className="space-y-8">
+            {principles.map((item, i) => (
+              <div key={i} className="flex gap-4">
+                <span className="text-xs text-gray-600 mt-1 font-mono">0{i + 1}</span>
+                <div>
+                  <h3 className="font-medium mb-1">{item.title}</h3>
+                  <p className="text-sm text-gray-500">{item.description}</p>
+                </div>
               </div>
             ))}
           </div>

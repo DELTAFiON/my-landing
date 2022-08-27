@@ -1,43 +1,41 @@
-import { ArrowRight, Play } from "lucide-react";
-
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary-600/10 rounded-full blur-3xl" />
-      </div>
+    <section className="relative min-h-screen flex items-center pt-20">
+      <div className="max-w-6xl mx-auto px-6 py-32">
+        <div className="max-w-3xl">
+          <p className="text-sm text-gray-500 mb-6 tracking-wide uppercase">
+            Landing Page Template
+          </p>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 animate-fade-in">
-          We are a{" "}
-          <span className="gradient-text">Landing Page</span>
-        </h1>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold leading-[0.95] tracking-tight mb-8">
+            We build
+            <br />
+            digital products.
+          </h1>
 
-        <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 animate-slide-up">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum.
-        </p>
+          <p className="text-lg md:text-xl text-gray-400 max-w-xl mb-12 leading-relaxed">
+            A modern template for startups and studios. Clean design, thoughtful interactions, and everything you need to launch.
+          </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up">
-          <a href="#contact" className="btn-primary flex items-center gap-2 group">
-            Get Started
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </a>
-          <button className="btn-secondary flex items-center gap-2">
-            <Play className="w-5 h-5" />
-            Watch Demo
-          </button>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a href="#contact" className="btn-primary text-center">
+              Start a project
+            </a>
+            <a href="#services" className="btn-secondary text-center">
+              View services
+            </a>
+          </div>
         </div>
 
-        <div className="mt-20 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+        <div className="mt-32 grid grid-cols-3 gap-8 max-w-lg">
           {[
-            { value: "500+", label: "Clients" },
-            { value: "1000+", label: "Projects" },
-            { value: "24/7", label: "Support" },
+            { value: "120+", label: "Projects shipped" },
+            { value: "8", label: "Years experience" },
+            { value: "100%", label: "Client satisfaction" },
           ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold gradient-text">{stat.value}</div>
-              <div className="text-sm text-gray-400 mt-1">{stat.label}</div>
+            <div key={stat.label}>
+              <div className="text-2xl md:text-3xl font-semibold mb-1">{stat.value}</div>
+              <div className="text-xs text-gray-500 uppercase tracking-wider">{stat.label}</div>
             </div>
           ))}
         </div>

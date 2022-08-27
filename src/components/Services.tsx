@@ -1,59 +1,43 @@
-import { Globe, ShoppingCart, Download, Languages, Plane, BarChart3 } from "lucide-react";
-
 const services = [
   {
-    icon: Globe,
-    name: "Lorem ipsum dolor",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.",
+    id: "01",
+    title: "Product Design",
+    description: "End-to-end design from research to high-fidelity prototypes. Systems thinking applied to every touchpoint.",
   },
   {
-    icon: ShoppingCart,
-    name: "Consectetur adipiscing",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.",
+    id: "02",
+    title: "Development",
+    description: "Clean, maintainable code with modern frameworks. Performance budgets enforced from day one.",
   },
   {
-    icon: Download,
-    name: "Lorem ipsum dolor",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.",
+    id: "03",
+    title: "Brand Identity",
+    description: "Visual systems that scale. Logos, typography, color, and voice unified into one coherent language.",
   },
   {
-    icon: Languages,
-    name: "Consectetur adipiscing",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.",
-  },
-  {
-    icon: Plane,
-    name: "Lorem ipsum dolor",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.",
-  },
-  {
-    icon: BarChart3,
-    name: "Consectetur adipiscing",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.",
+    id: "04",
+    title: "Strategy",
+    description: "Market research, competitive analysis, and positioning that informs every design decision downstream.",
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="section-padding bg-dark-900/50">
+    <section id="services" className="section-padding border-t border-white/[0.06]">
       <div className="container-max">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Our <span className="gradient-text">Services</span>
-          </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            We offer a wide range of services to help you grow your business.
-          </p>
+        <div className="flex items-end justify-between mb-16">
+          <div>
+            <p className="text-sm text-gray-500 mb-4 tracking-wide uppercase">Services</p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">What we do.</h2>
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div key={index} className="card group">
-              <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-6 group-hover:bg-primary-500/20 transition-colors">
-                <service.icon className="w-6 h-6 text-primary-400" />
-              </div>
-              <h3 className="text-lg font-semibold mb-3">{service.name}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{service.text}</p>
+        <div className="grid md:grid-cols-2 gap-px bg-white/[0.06] rounded-xl overflow-hidden">
+          {services.map((service) => (
+            <div key={service.id} className="bg-[#0a0a0a] p-8 md:p-12 group">
+              <span className="text-xs text-gray-600 font-mono">{service.id}</span>
+              <h3 className="text-xl font-medium mt-4 mb-3">{service.title}</h3>
+              <p className="text-sm text-gray-500 leading-relaxed">{service.description}</p>
             </div>
           ))}
         </div>
