@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "Landing — Modern React Landing Page",
-  description: "A beautiful, modern landing page built with Next.js 13, React 18, and Tailwind CSS 3.",
+  title: "Landing — Design Studio",
+  description: "A design studio building distinctive digital products for forward-thinking brands.",
 };
 
 export default function RootLayout({
@@ -16,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

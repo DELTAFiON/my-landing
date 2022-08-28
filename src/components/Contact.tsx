@@ -1,56 +1,30 @@
 export default function Contact() {
   return (
-    <section id="contact" className="section-padding border-t border-white/[0.06]">
+    <section id="contact" className="section-padding border-t border-[#0D0D0D]/[0.08]">
       <div className="container-max">
-        <div className="grid md:grid-cols-2 gap-16">
-          <div>
-            <p className="text-sm text-gray-500 mb-4 tracking-wide uppercase">Contact</p>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
-              Let's talk.
+        <div className="grid md:grid-cols-12 gap-8">
+          <div className="md:col-span-5">
+            <p className="text-sm text-[#FF4D00] font-[JetBrains_Mono] mb-4">Contact</p>
+            <h2 className="text-4xl md:text-6xl font-semibold tracking-tight font-[Space_Grotesk] leading-[0.95]">
+              Let's build something.
             </h2>
-            <p className="text-gray-400 mb-8">
-              Have a project in mind? We'd love to hear about it.
-            </p>
-
-            <div className="space-y-4 text-sm">
-              <div>
-                <span className="text-gray-500">Email</span>
-                <div className="text-gray-300 mt-1">hello@landing.studio</div>
-              </div>
-              <div>
-                <span className="text-gray-500">Location</span>
-                <div className="text-gray-300 mt-1">San Francisco, CA</div>
-              </div>
-            </div>
           </div>
 
-          <div>
-            <form className="space-y-6">
+          <div className="md:col-span-7 md:pt-12">
+            <div className="space-y-6 mb-12">
               <div>
-                <label className="block text-xs text-gray-500 mb-2 uppercase tracking-wider">Name</label>
-                <input
-                  type="text"
-                  className="w-full bg-transparent border-b border-white/[0.1] py-3 focus:outline-none focus:border-white/30 transition-colors"
-                />
+                <span className="text-xs text-[#0D0D0D]/40 uppercase tracking-wider">Email</span>
+                <div className="text-lg font-medium mt-1">hello@landing.studio</div>
               </div>
               <div>
-                <label className="block text-xs text-gray-500 mb-2 uppercase tracking-wider">Email</label>
-                <input
-                  type="email"
-                  className="w-full bg-transparent border-b border-white/[0.1] py-3 focus:outline-none focus:border-white/30 transition-colors"
-                />
+                <span className="text-xs text-[#0D0D0D]/40 uppercase tracking-wider">Location</span>
+                <div className="text-lg font-medium mt-1">San Francisco, CA</div>
               </div>
-              <div>
-                <label className="block text-xs text-gray-500 mb-2 uppercase tracking-wider">Message</label>
-                <textarea
-                  rows={4}
-                  className="w-full bg-transparent border-b border-white/[0.1] py-3 focus:outline-none focus:border-white/30 transition-colors resize-none"
-                />
-              </div>
-              <button type="submit" className="btn-primary">
-                Send message
-              </button>
-            </form>
+            </div>
+
+            <a href="mailto:hello@landing.studio" className="btn-primary inline-block">
+              Start a conversation
+            </a>
           </div>
         </div>
       </div>

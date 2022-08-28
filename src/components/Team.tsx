@@ -1,25 +1,29 @@
 const team = [
-  { name: "John Doe", role: "Founder" },
-  { name: "Mike Doe", role: "Design Lead" },
-  { name: "Jane Doe", role: "Engineering" },
-  { name: "Karen Doe", role: "Strategy" },
+  { name: "John Doe", role: "Founder / Design" },
+  { name: "Mike Doe", role: "Engineering" },
+  { name: "Jane Doe", role: "Strategy" },
+  { name: "Karen Doe", role: "Motion" },
 ];
 
 export default function Team() {
   return (
-    <section id="team" className="section-padding border-t border-white/[0.06]">
+    <section id="team" className="section-padding border-t border-[#0D0D0D]/[0.08]">
       <div className="container-max">
-        <p className="text-sm text-gray-500 mb-4 tracking-wide uppercase">Team</p>
-        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-16">
-          Small team, senior only.
-        </h2>
+        <div className="grid md:grid-cols-12 gap-8 mb-16">
+          <div className="md:col-span-4">
+            <p className="text-sm text-[#FF4D00] font-[JetBrains_Mono]">Team</p>
+          </div>
+          <div className="md:col-span-8">
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight font-[Space_Grotesk]">The people</h2>
+          </div>
+        </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {team.map((member, i) => (
-            <div key={i}>
-              <div className="aspect-square bg-white/[0.03] rounded-lg mb-4" />
+            <div key={i} className="group">
+              <div className="aspect-square bg-[#0D0D0D]/[0.04] rounded-lg mb-4 group-hover:bg-[#FF4D00]/10 transition-colors" />
               <div className="font-medium text-sm">{member.name}</div>
-              <div className="text-xs text-gray-500 mt-1">{member.role}</div>
+              <div className="text-xs text-[#0D0D0D]/50 mt-1">{member.role}</div>
             </div>
           ))}
         </div>
