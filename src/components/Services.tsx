@@ -23,31 +23,28 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="section-padding border-t border-[#0D0D0D]/[0.08]">
-      <div className="container-max">
-        <div className="grid md:grid-cols-12 gap-8 mb-16">
-          <div className="md:col-span-4">
-            <p className="text-sm text-[#FF4D00] font-[JetBrains_Mono]">Services</p>
-          </div>
-          <div className="md:col-span-8">
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight font-[Space_Grotesk]">Capabilities</h2>
-          </div>
-        </div>
+    <section id="services" className="band band--plain">
+      <div className="content">
+        <p className="eyebrow mb-8">Services</p>
 
-        <div className="border-t border-[#0D0D0D]/[0.08]">
+        <h2 className="mb-16">Capabilities</h2>
+
+        <div className="border-t border-[rgba(15,15,15,0.12)]">
           {services.map((service) => (
             <div
               key={service.number}
-              className="grid md:grid-cols-12 gap-4 py-8 border-b border-[#0D0D0D]/[0.08] group hover:bg-[#0D0D0D]/[0.02] transition-colors -mx-4 px-4"
+              className="grid md:grid-cols-12 gap-4 py-10 border-b border-[rgba(15,15,15,0.12)] group"
             >
               <div className="md:col-span-1">
-                <span className="text-xs font-[JetBrains_Mono] text-[#0D0D0D]/40">{service.number}</span>
+                <span className="text-xs font-mono text-muted">{service.number}</span>
               </div>
               <div className="md:col-span-4">
-                <h3 className="text-xl font-medium font-[Space_Grotesk] group-hover:text-[#FF4D00] transition-colors">{service.title}</h3>
+                <h3 className="text-xl font-semibold font-display group-hover:text-accent transition-colors">
+                  {service.title}
+                </h3>
               </div>
               <div className="md:col-span-7">
-                <p className="text-sm text-[#0D0D0D]/60 leading-relaxed">{service.description}</p>
+                <p className="text-sm text-muted leading-relaxed">{service.description}</p>
               </div>
             </div>
           ))}

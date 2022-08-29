@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 const links = [
-  { name: "Studio", href: "#about" },
+  { name: "Studio", href: "#studio" },
   { name: "Services", href: "#services" },
   { name: "Work", href: "#work" },
   { name: "Team", href: "#team" },
@@ -14,9 +14,9 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#FAFAF8]/95 backdrop-blur-sm border-b border-[#0D0D0D]/[0.08]">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="text-base font-semibold tracking-tight font-[Space_Grotesk]">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-sm border-b border-[rgba(15,15,15,0.12)]">
+      <div className="max-w-[1200px] mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="#" className="text-sm font-bold tracking-tight font-display">
           Landing
         </a>
 
@@ -25,14 +25,14 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm text-[#0D0D0D]/60 hover:text-[#0D0D0D] transition-colors"
+              className="text-sm text-ink/50 hover:text-ink transition-colors"
             >
               {link.name}
             </a>
           ))}
           <a
             href="#contact"
-            className="bg-[#0D0D0D] text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-[#FF4D00] transition-colors"
+            className="bg-ink text-surface px-5 py-2 rounded text-sm font-bold uppercase tracking-[0.06em] hover:bg-accent transition-colors"
           >
             Start a project
           </a>
@@ -42,18 +42,18 @@ export default function Navbar() {
           className="md:hidden w-6 h-6 flex flex-col justify-center gap-1.5"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <span className={`w-full h-px bg-[#0D0D0D] transition-transform ${isOpen ? "rotate-45 translate-y-[3.5px]" : ""}`} />
-          <span className={`w-full h-px bg-[#0D0D0D] transition-transform ${isOpen ? "-rotate-45 -translate-y-[3.5px]" : ""}`} />
+          <span className={`w-full h-px bg-ink transition-transform ${isOpen ? "rotate-45 translate-y-[3.5px]" : ""}`} />
+          <span className={`w-full h-px bg-ink transition-transform ${isOpen ? "-rotate-45 -translate-y-[3.5px]" : ""}`} />
         </button>
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-[#FAFAF8] border-b border-[#0D0D0D]/[0.08] px-6 py-4 space-y-4">
+        <div className="md:hidden bg-surface border-b border-[rgba(15,15,15,0.12)] px-6 py-4 space-y-4">
           {links.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="block text-[#0D0D0D]/60 hover:text-[#0D0D0D]"
+              className="block text-ink/50 hover:text-ink"
               onClick={() => setIsOpen(false)}
             >
               {link.name}
@@ -61,7 +61,7 @@ export default function Navbar() {
           ))}
           <a
             href="#contact"
-            className="block bg-[#0D0D0D] text-white px-5 py-2 rounded-full text-sm font-medium text-center"
+            className="block bg-ink text-surface px-5 py-2 rounded text-sm font-bold uppercase tracking-[0.06em] text-center"
             onClick={() => setIsOpen(false)}
           >
             Start a project

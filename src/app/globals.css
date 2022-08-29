@@ -1,47 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    @apply bg-[#FAFAF8] text-[#0D0D0D] font-sans antialiased;
-  }
-
-  ::selection {
-    background: #FF4D00;
-    color: white;
-  }
+:root {
+  --content-max: 1200px;
+  --section-y: 160px;
+  --divider: rgba(15, 15, 15, 0.12);
+  --stripe-fill: repeating-linear-gradient(
+    135deg,
+    rgba(15, 15, 15, 0.045) 0 1px,
+    transparent 1px 10px
+  );
 }
 
-@layer components {
-  .section-padding {
-    @apply py-24 md:py-32 px-6;
-  }
-
-  .container-max {
-    @apply max-w-6xl mx-auto;
-  }
-
-  .btn-primary {
-    @apply bg-[#0D0D0D] text-white px-8 py-3 rounded-full font-medium text-base transition-all duration-200 hover:bg-[#FF4D00];
-  }
-
-  .btn-secondary {
-    @apply border border-[#0D0D0D]/20 text-[#0D0D0D] px-8 py-3 rounded-full font-medium text-base transition-all duration-200 hover:border-[#0D0D0D];
-  }
+html {
+  scroll-behavior: smooth;
 }
 
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+body {
+  background: #ede9e3;
+  color: #1a1817;
+  font-family: "Archivo", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.animate-marquee {
-  animation: marquee 30s linear infinite;
+::selection {
+  background: #d94a2b;
+  color: #ede9e3;
+}
+
+.band {
+  width: 100%;
+  padding: var(--section-y) 0;
+  border-bottom: 1px solid var(--divider);
+}
+
+.band--plain {
+  background: transparent;
+}
+
+.band--stripe {
+  background-image: var(--stripe-fill);
+}
+
+.band--last {
+  border-bottom: none;
+}
+
+.content {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.content h1 {
+  font-size: clamp(2.75rem, 5vw, 4.25rem);
+  line-height: 0.95;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.content h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.content p {
+  max-width: 60ch;
+  line-height: 1.55;
+  margin-top: 16px;
+  color: #7a746e;
+}
+
+.eyebrow {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #d94a2b;
+}
+
+.btn-sharp {
+  display: inline-block;
+  background: #1a1817;
+  color: #ede9e3;
+  padding: 13px 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.875rem;
+  border-radius: 0;
+  transition: background 0.15s ease;
+}
+
+.btn-sharp:hover {
+  background: #d94a2b;
+}
+
+@media (max-width: 768px) {
+  .band {
+    padding: 96px 0;
+  }
+
+  .content {
+    padding: 0 24px;
+  }
 }

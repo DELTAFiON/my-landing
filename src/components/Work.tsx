@@ -7,34 +7,31 @@ const projects = [
 
 export default function Work() {
   return (
-    <section id="work" className="section-padding border-t border-[#0D0D0D]/[0.08] bg-[#0D0D0D] text-white">
-      <div className="container-max">
-        <div className="grid md:grid-cols-12 gap-8 mb-16">
-          <div className="md:col-span-4">
-            <p className="text-sm text-[#FF4D00] font-[JetBrains_Mono]">Work</p>
-          </div>
-          <div className="md:col-span-8">
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight font-[Space_Grotesk]">Selected projects</h2>
-          </div>
-        </div>
+    <section id="work" className="band band--stripe">
+      <div className="content">
+        <p className="eyebrow mb-8">Work</p>
 
-        <div className="border-t border-white/[0.08]">
+        <h2 className="mb-16">Selected projects</h2>
+
+        <div className="border-t border-[rgba(15,15,15,0.12)]">
           {projects.map((project, i) => (
             <div
               key={i}
-              className="grid md:grid-cols-12 gap-4 py-8 border-b border-white/[0.08] group cursor-pointer"
+              className="grid md:grid-cols-12 gap-4 py-8 border-b border-[rgba(15,15,15,0.12)] group cursor-pointer"
             >
               <div className="md:col-span-1">
-                <span className="text-xs font-[JetBrains_Mono] text-white/30">0{i + 1}</span>
+                <span className="text-xs font-mono text-muted">0{i + 1}</span>
               </div>
               <div className="md:col-span-5">
-                <h3 className="text-xl font-medium font-[Space_Grotesk] group-hover:text-[#FF4D00] transition-colors">{project.title}</h3>
+                <h3 className="text-xl font-semibold font-display group-hover:text-accent transition-colors">
+                  {project.title}
+                </h3>
               </div>
               <div className="md:col-span-4">
-                <span className="text-sm text-white/50">{project.category}</span>
+                <span className="text-sm text-muted">{project.category}</span>
               </div>
               <div className="md:col-span-2 text-right">
-                <span className="text-xs font-[JetBrains_Mono] text-white/30">{project.year}</span>
+                <span className="text-xs font-mono text-muted">{project.year}</span>
               </div>
             </div>
           ))}
