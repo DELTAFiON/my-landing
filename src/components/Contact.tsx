@@ -1,29 +1,30 @@
 export default function Contact() {
   return (
-    <section id="contact" className="band band--stripe band--last">
-      <div className="content">
-        <p className="eyebrow mb-8">Contact</p>
+    <section id="contact" className="py-20 md:py-32 px-6 md:px-10 bg-[#070607] text-white">
+      <div className="max-w-[1280px] mx-auto grid md:grid-cols-2 gap-16">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#fc5000] mb-8">
+            Contact
+          </p>
+          <h2 className="text-4xl md:text-5xl tracking-wide text-white leading-[1.1]" style={{ fontFamily: "Anton, Impact, sans-serif" }}>
+            Let&apos;s build something hot.
+          </h2>
+          <p className="text-base text-white/50 max-w-[52ch] mt-8 leading-relaxed">
+            Have a project in mind? We&apos;re always looking for the next big thing.
+          </p>
+        </div>
 
-        <div className="grid md:grid-cols-2 gap-16">
-          <div>
-            <h2 className="leading-[0.95]">
-              Let&apos;s build something.
-            </h2>
-          </div>
-
-          <div className="space-y-8">
-            <div>
-              <span className="text-xs text-muted uppercase tracking-[0.18em] font-mono">Email</span>
-              <div className="text-lg font-semibold mt-2 font-display">hello@landing.studio</div>
-            </div>
-            <div>
-              <span className="text-xs text-muted uppercase tracking-[0.18em] font-mono">Location</span>
-              <div className="text-lg font-semibold mt-2 font-display">San Francisco, CA</div>
-            </div>
-            <a href="mailto:hello@landing.studio" className="btn-sharp">
-              Start a conversation
-            </a>
-          </div>
+        <div>
+          <form className="space-y-6">
+            <input
+              type="email"
+              placeholder="your@email.com"
+              className="w-full bg-transparent border border-white rounded-[100px] px-8 py-6 text-base text-white outline-none placeholder:text-white/50 font-medium"
+            />
+            <button type="submit" className="w-full bg-[#fc5000] text-[#070607] rounded-full px-6 py-3 text-base font-medium hover:opacity-85 transition-opacity">
+              Send message
+            </button>
+          </form>
         </div>
       </div>
     </section>

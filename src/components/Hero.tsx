@@ -1,24 +1,42 @@
 export default function Hero() {
   return (
-    <section className="band band--plain">
-      <div className="content">
-        <p className="eyebrow mb-8">Design Studio — Est. 2015</p>
+    <section className="py-20 md:py-32 px-6 md:px-10">
+      <div className="max-w-[1280px] mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#fc5000] mb-8">
+            Design Studio
+          </p>
 
-        <h1>
-          We make
-          <br />
-          things that
-          <br />
-          <span className="text-accent">matter.</span>
-        </h1>
+          <h1 className="text-[clamp(48px,8vw,120px)] leading-[0.94] tracking-wide text-[#070607]" style={{ fontFamily: "Anton, Impact, sans-serif" }}>
+            We forge
+            <br />
+            fire on
+            <br />
+            <span className="text-[#fc5000]">warm</span>
+            <br />
+            stone.
+          </h1>
 
-        <p className="mt-8 max-w-[60ch]">
-          An independent studio partnering with founders and teams to design and build products people actually want to use.
-        </p>
+          <p className="text-base text-[#070607]/60 max-w-[52ch] mt-8 leading-relaxed">
+            An independent studio crafting digital products with volcanic intensity. Every pixel intentional, every interaction earned.
+          </p>
 
-        <a href="#contact" className="btn-sharp mt-12">
-          Start a project
-        </a>
+          <div className="flex flex-wrap gap-4 mt-12">
+            <a href="#contact" className="bg-[#fc5000] text-[#070607] rounded-full px-6 py-3 text-base font-medium hover:opacity-85 transition-opacity">
+              Start a project
+            </a>
+            <a href="#work" className="border-2 border-[#070607] text-[#070607] rounded-[40px] px-6 py-4 text-base font-medium hover:bg-[#070607]/5 transition-colors">
+              View work
+            </a>
+          </div>
+        </div>
+
+        <div
+          className="rounded-[40px] aspect-[4/5] md:aspect-square"
+          style={{
+            background: "radial-gradient(circle, #fc5000 1.5px, transparent 1.5px) 0 0 / 12px 12px, linear-gradient(135deg, #524ae9 0%, #fc5000 100%)",
+          }}
+        />
       </div>
     </section>
   );

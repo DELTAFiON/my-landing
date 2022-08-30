@@ -7,18 +7,23 @@ const team = [
 
 export default function Team() {
   return (
-    <section id="team" className="band band--plain">
-      <div className="content">
-        <p className="eyebrow mb-8">Team</p>
+    <section id="team" className="py-20 md:py-32 px-6 md:px-10">
+      <div className="max-w-[1280px] mx-auto">
+        <div className="flex items-end justify-between mb-16">
+          <h2 className="text-4xl md:text-5xl tracking-wide text-[#070607]" style={{ fontFamily: "Anton, Impact, sans-serif" }}>
+            Team
+          </h2>
+          <span className="hidden md:block text-xs text-[#070607]/40 uppercase tracking-[0.18em]">
+            The people
+          </span>
+        </div>
 
-        <h2 className="mb-16">The people</h2>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {team.map((member, i) => (
-            <div key={i} className="group">
-              <div className="aspect-square bg-ink/[0.04] rounded-[4px] mb-4 group-hover:bg-accent/10 transition-colors" />
-              <div className="font-semibold text-sm font-display">{member.name}</div>
-              <div className="text-xs text-muted mt-1 font-mono">{member.role}</div>
+        <div className="grid md:grid-cols-4 gap-6">
+          {team.map((member) => (
+            <div key={member.name} className="bg-[#f7f6f2] rounded-[40px] p-10">
+              <div className="aspect-square bg-[#e2e2df] rounded-[40px] mb-6" />
+              <div className="text-base tracking-wide text-[#070607]" style={{ fontFamily: "Anton, Impact, sans-serif" }}>{member.name}</div>
+              <div className="text-xs text-[#070607]/40 mt-1 font-mono">{member.role}</div>
             </div>
           ))}
         </div>

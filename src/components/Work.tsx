@@ -2,37 +2,33 @@ const projects = [
   { title: "Fintech Platform", category: "Product Design", year: "2022" },
   { title: "E-commerce Rebrand", category: "Brand Identity", year: "2022" },
   { title: "Healthcare App", category: "Product Design", year: "2021" },
-  { title: "SaaS Dashboard", category: "Development", year: "2021" },
 ];
 
 export default function Work() {
   return (
-    <section id="work" className="band band--stripe">
-      <div className="content">
-        <p className="eyebrow mb-8">Work</p>
+    <section id="work" className="py-20 md:py-32 px-6 md:px-10">
+      <div className="max-w-[1280px] mx-auto">
+        <div className="flex items-end justify-between mb-16">
+          <h2 className="text-4xl md:text-5xl tracking-wide text-[#070607]" style={{ fontFamily: "Anton, Impact, sans-serif" }}>
+            Work
+          </h2>
+          <span className="hidden md:block text-xs text-[#070607]/40 uppercase tracking-[0.18em]">
+            Selected projects
+          </span>
+        </div>
 
-        <h2 className="mb-16">Selected projects</h2>
-
-        <div className="border-t border-[rgba(15,15,15,0.12)]">
-          {projects.map((project, i) => (
-            <div
-              key={i}
-              className="grid md:grid-cols-12 gap-4 py-8 border-b border-[rgba(15,15,15,0.12)] group cursor-pointer"
-            >
-              <div className="md:col-span-1">
-                <span className="text-xs font-mono text-muted">0{i + 1}</span>
-              </div>
-              <div className="md:col-span-5">
-                <h3 className="text-xl font-semibold font-display group-hover:text-accent transition-colors">
+        <div className="space-y-6">
+          {projects.map((project) => (
+            <div key={project.title} className="bg-[#f7f6f2] rounded-[40px] p-10 flex flex-col md:flex-row md:items-center gap-6">
+              <div className="flex-1">
+                <span className="inline-block bg-[#f5f28e] text-[#070607] rounded-full px-3 py-1 text-xs font-medium mb-4">
+                  {project.category}
+                </span>
+                <h3 className="text-xl tracking-wide text-[#070607]" style={{ fontFamily: "Anton, Impact, sans-serif" }}>
                   {project.title}
                 </h3>
               </div>
-              <div className="md:col-span-4">
-                <span className="text-sm text-muted">{project.category}</span>
-              </div>
-              <div className="md:col-span-2 text-right">
-                <span className="text-xs font-mono text-muted">{project.year}</span>
-              </div>
+              <span className="text-xs text-[#070607]/40 font-mono">{project.year}</span>
             </div>
           ))}
         </div>
